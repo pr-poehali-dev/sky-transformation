@@ -4,146 +4,103 @@ import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, 
 const carouselCards = [
   {
     id: 1,
-    category: "Запросы клиентов",
-    title: "Создавайте то, что нужно клиентам",
+    category: "Пакет Базовый",
+    title: "Для малого бизнеса с 1-3 авто",
     icon: ArrowRight,
-    mockup: "intercom",
+    mockup: "basic",
   },
   {
     id: 2,
-    category: "Git-интеграция",
-    title: "Автоматизируйте PR и коммиты",
+    category: "Пакет Флот",
+    title: "Для среднего и крупного автопарка",
     icon: Plus,
-    mockup: "github",
+    mockup: "fleet",
   },
   {
     id: 3,
-    category: "Orbit Mobile",
-    title: "Управляйте работой откуда угодно",
+    category: "Пакет Премиум",
+    title: "Для топ-менеджеров и VIP-автомобилей",
     icon: ArrowRight,
-    mockup: "mobile",
-  },
-  {
-    id: 4,
-    category: "Orbit Asks",
-    title: "Превращайте запросы в задачи",
-    icon: ArrowRight,
-    mockup: "asks",
-  },
-  {
-    id: 5,
-    category: "Интеграции Orbit",
-    title: "100+ способов расширить возможности",
-    icon: ArrowRight,
-    mockup: "integrations",
-  },
-  {
-    id: 6,
-    category: "Интеграция с Figma",
-    title: "Связь между разработкой и дизайном",
-    icon: ArrowRight,
-    mockup: "figma",
-  },
-  {
-    id: 7,
-    category: "Для разработчиков",
-    title: "Создавайте плагины через Orbit API",
-    icon: ArrowRight,
-    mockup: "api",
+    mockup: "premium",
   },
 ]
 
-function IntercomMockup() {
-  return (
-    <div className="flex flex-col gap-3 p-4">
-      <div className="flex items-center gap-2 text-xs text-zinc-400">
-        <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
-        <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">sarah@example.com</span>
-      </div>
-      <p className="text-sm text-zinc-300">
-        Нужна разбивка затрат <span className="text-zinc-500">по...</span>
-      </p>
-
-      <div className="mt-2 flex items-center gap-2 bg-zinc-800/50 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-zinc-700 rounded flex items-center justify-center">
-          <span className="text-[10px] text-zinc-400">A</span>
-        </div>
-        <span className="text-sm text-zinc-300">ACME</span>
-        <span className="text-xs text-zinc-500">Новый запрос</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 bg-zinc-800/30 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-yellow-500/20 rounded flex items-center justify-center">
-          <span className="text-[10px] text-yellow-500">◆</span>
-        </div>
-        <span className="text-sm text-zinc-400">Мультиоблачные</span>
-        <span className="text-xs text-zinc-500">затраты</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 px-3 py-2">
-        <div className="w-4 h-4 rounded-full border border-zinc-600" />
-        <span className="text-sm text-zinc-500">Планирование</span>
-        <div className="ml-2 flex items-center gap-1 text-xs text-zinc-600">
-          <span>Q4 2025</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function GitHubMockup() {
+function BasicMockup() {
   return (
     <div className="flex flex-col gap-2 p-4">
-      <div className="flex items-center gap-2 text-xs">
-        <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
-        <span className="text-zinc-500">igor/lin 15287</span>
-        <span className="text-blue-400/70">add sourc...</span>
+      <div className="text-xs text-zinc-400 mb-2">Включено:</div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-green-500 mt-0.5">✓</span>
+        <span className="text-zinc-300">ТО 2 раза в год</span>
       </div>
-
-      <div className="mt-3 space-y-2">
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">связал</span>
-          <span className="text-blue-400/70">igor/lin 15287</span>
-          <span className="text-zinc-600">add sou...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с В работе...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">GitHub</span>
-          <span className="text-zinc-600">изменил статус с На ревью...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с Готово...</span>
-        </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-green-500 mt-0.5">✓</span>
+        <span className="text-zinc-300">Сезонная замена и хранение шин</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-green-500 mt-0.5">✓</span>
+        <span className="text-zinc-300">Мойка 1 раз в месяц</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-green-500 mt-0.5">✓</span>
+        <span className="text-zinc-300">Контроль штрафов и налогов</span>
+      </div>
+      <div className="mt-3 pt-3 border-t border-zinc-800">
+        <div className="text-xs text-zinc-500">Идеально для стартапов</div>
       </div>
     </div>
   )
 }
 
-function MobileMockup() {
+function FleetMockup() {
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="relative w-32 h-56 bg-zinc-900 rounded-2xl border border-zinc-700 overflow-hidden">
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-zinc-800 rounded-full" />
-        <div className="mt-6 px-3">
-          <div className="text-[10px] text-zinc-400 mb-2">Входящие</div>
-          <div className="space-y-1.5">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-6 bg-zinc-800/50 rounded" />
-            ))}
-          </div>
-        </div>
+    <div className="flex flex-col gap-2 p-4">
+      <div className="text-xs text-zinc-400 mb-2">Базовый +</div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-blue-500 mt-0.5">★</span>
+        <span className="text-zinc-300">Полное сопровождение ДТП</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-blue-500 mt-0.5">★</span>
+        <span className="text-zinc-300">Регистрация в ГИБДД</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-blue-500 mt-0.5">★</span>
+        <span className="text-zinc-300">Ежемесячная отчётность</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-blue-500 mt-0.5">★</span>
+        <span className="text-zinc-300">Персональный менеджер</span>
+      </div>
+      <div className="mt-3 pt-3 border-t border-zinc-800">
+        <div className="text-xs text-zinc-500">Для автопарка 5-50 машин</div>
+      </div>
+    </div>
+  )
+}
+
+function PremiumMockup() {
+  return (
+    <div className="flex flex-col gap-2 p-4">
+      <div className="text-xs text-zinc-400 mb-2">Флот + VIP</div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-purple-500 mt-0.5">◆</span>
+        <span className="text-zinc-300">Экспресс-детейлинг с выездом</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-purple-500 mt-0.5">◆</span>
+        <span className="text-zinc-300">Приоритет (2-4 часа)</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-purple-500 mt-0.5">◆</span>
+        <span className="text-zinc-300">Подменное авто премиум</span>
+      </div>
+      <div className="flex items-start gap-2 text-xs">
+        <span className="text-purple-500 mt-0.5">◆</span>
+        <span className="text-zinc-300">Подбор и покупка авто</span>
+      </div>
+      <div className="mt-3 pt-3 border-t border-zinc-800">
+        <div className="text-xs text-zinc-500">Для руководителей</div>
       </div>
     </div>
   )
@@ -195,12 +152,12 @@ function ApiMockup() {
 
 function CardMockup({ type }: { type: string }) {
   switch (type) {
-    case "intercom":
-      return <IntercomMockup />
-    case "github":
-      return <GitHubMockup />
-    case "mobile":
-      return <MobileMockup />
+    case "basic":
+      return <BasicMockup />
+    case "fleet":
+      return <FleetMockup />
+    case "premium":
+      return <PremiumMockup />
     case "asks":
       return <AsksMockup />
     case "integrations":
@@ -222,7 +179,7 @@ export function WorkflowsSection() {
   }
 
   const scrollRight = () => {
-    setScrollPosition(Math.min(carouselCards.length - 4, scrollPosition + 1))
+    setScrollPosition(Math.min(carouselCards.length - 3, scrollPosition + 1))
   }
 
   return (
@@ -243,15 +200,15 @@ export function WorkflowsSection() {
             {/* Orange indicator */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Процессы и интеграции</span>
+              <span className="text-sm text-zinc-400">Пакеты услуг</span>
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Работайте слаженно
+              Выберите пакет
               <br />
-              между инструментами
+              под ваш автопарк
             </h2>
           </div>
 
@@ -315,7 +272,7 @@ export function WorkflowsSection() {
           <button
             onClick={scrollRight}
             className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            disabled={scrollPosition >= carouselCards.length - 4}
+            disabled={scrollPosition >= carouselCards.length - 3}
           >
             <ChevronRight className="w-5 h-5" />
           </button>
