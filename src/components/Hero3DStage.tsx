@@ -5,7 +5,7 @@ import { Navbar } from "./Navbar"
 import { LogoCloud } from "./LogoCloud"
 import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
-import { ProductDirectionSection } from "./ProductDirectionSection"
+import { PricingCalculator } from "./PricingCalculator"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
 import { Footer } from "./Footer"
@@ -162,7 +162,7 @@ export function Hero3DStage() {
           <LogoCloud />
           <FeatureCardsSection />
           <AISection />
-          <ProductDirectionSection />
+          <PricingCalculator />
           <WorkflowsSection />
           <CTASection />
           <Footer />
